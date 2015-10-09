@@ -1,5 +1,8 @@
+package model;
+
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,7 +18,7 @@ public class Player implements Serializable {
 
     
     private String name;
-    private int money;
+    private double money;
     
     public Player() {
     }
@@ -28,12 +31,40 @@ public class Player implements Serializable {
         this.name = name;
     }
 
-    public int getMoney() {
+    public double getMoney() {
         return money;
     }
 
     public void setMoney(int money) {
         this.money = money;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 47 * hash + Objects.hashCode(this.name);
+        hash = (int) (47 * hash + this.money);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Player other = (Player) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        return this.money == other.money;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" + "name=" + name + ", money=" + money + '}';
     }
     
 }
