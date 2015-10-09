@@ -5,6 +5,7 @@
  */
 package hurricaneprep;
 
+import model.Player;
 /**
  *
  * @author Ryan
@@ -17,7 +18,13 @@ public class Hurricaneprep {
     public static void main(String[] args) {
         // TODO code application logic here
     
-    System.out.println("Hello");
+    Player playerOne = new Player();
+    
+    playerOne.setName("fred flintstone");
+    playerOne.setMoney((int) 5.50);
+    
+    String playerInfo = playerOne.toString();
+    System.out.println(playerInfo);
     }
     
 }
