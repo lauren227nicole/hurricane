@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author Sean
  */
 public class RoomModel implements Serializable {
-    InventoryItem inventory;
+    InventoryItem inventory; 
 
     public RoomModel() {
     
