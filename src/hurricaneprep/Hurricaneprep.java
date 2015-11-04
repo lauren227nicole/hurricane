@@ -6,6 +6,9 @@
 package hurricaneprep;
 
 import model.Player;
+import view.MainMenuView;
+import view.WelcomeView;
+
 /**
  *
  * @author Ryan
@@ -17,14 +20,26 @@ public class Hurricaneprep {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    
-    Player playerOne = new Player();
-    
-    playerOne.setName("fred flintstone");
-    playerOne.setMoney((int) 5.50);
-    
-    String playerInfo = playerOne.toString();
-    System.out.println(playerInfo);
+        Player player = new Player();
+
+        WelcomeView welcomeView = new WelcomeView();
+        welcomeView.displayBanner();
+
+        player.setName(welcomeView.getPlayerName());
+
+        welcomeView.displayPlayerNameBanner(player);
+
+
+        MainMenuView mainView = new MainMenuView();
+        char in = mainView.getInput();
+        System.out.println("You Entered " + in);
+//    Player playerOne = new Player();
+//
+//    playerOne.setName("fred flintstone");
+//    playerOne.setMoney((int) 5.50);
+//
+//    String playerInfo = playerOne.toString();
+//    System.out.println(playerInfo);
     }
     
 }
