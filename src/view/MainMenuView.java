@@ -79,8 +79,8 @@ public class MainMenuView {
     System.out.println("Not Implemented Yet");
     }
 
-    private void showHelpToMenu() {
-        showHowToMenu();
+   public void showHelpToMenu() {
+       System.out.println("Not Implemented Yet");
     }
     private void showLoadGameMenu() {
         System.out.println("Not Implemented Yet");
