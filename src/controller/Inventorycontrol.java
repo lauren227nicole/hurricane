@@ -10,6 +10,8 @@ package controller;
  * @author Ryan
  */
 public class Inventorycontrol {
+
+
     
     
     

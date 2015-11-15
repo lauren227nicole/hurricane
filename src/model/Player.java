@@ -16,11 +16,11 @@ import java.util.Objects;
  */
 public class Player implements Serializable {
 
-    public static int MIN_MONEY = 0;
-    public static int MAX_MOVE = 1;
+    public static final int MIN_MONEY = 0;
+    public static final int MAX_MOVE = 1;
     private String name;
-    private double money;
-    
+    public static double money;
+
     public Player() {
     }
     

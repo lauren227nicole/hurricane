@@ -31,7 +31,7 @@ public class Hurricaneprep {
 
 
         MainMenuView mainView = new MainMenuView();
-        char in = mainView.getInput();
+        mainView.display();
         System.out.println("You Entered " + in);
 //    Player playerOne = new Player();
 //
